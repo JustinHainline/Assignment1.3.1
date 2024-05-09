@@ -22,15 +22,27 @@
                 {
                     case "T":
                     case "t":
-                        Console.WriteLine("Enter length of base of triangle")
+                        Console.WriteLine("Enter width of base of triangle");
+                        double width = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Enter height of triangle");
+                        double height = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Area of the triangle is " + TriagnleMethod(width, height));
                         break;
                     case "S":
                     case "s":
-                        Console.WriteLine("Enter length of side of square");
+                        Console.WriteLine("Enter side of square");
+                        double side1 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Enter other side of square");
+                        double side2 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Area of the square is " + AreaOfSquare(side1, side2));
                         break;
                     case "R":
                     case "r":
-                       // RectangleMethod();
+                        Console.WriteLine("Enter side of rectangle");
+                        double recside1 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Enter other side of rectangle");
+                        double recside2 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Area of the rectangle is " + AreaOfRectangle(recside1, recside2));
                         break;
                     case "X":
                     case "x":
@@ -42,32 +54,26 @@
                 }
             }
             while (readResult != "x" && readResult != "X");
-
-            static void Menu();
-            {
-
-            }
-
-
         }
-        static double TriagnleMethod(width, height)
+        static double AreaOfRectangle(double recside1, double recside2)
         {
-            Console.WriteLine("Please sides of triangle:");
-            Console.WriteLine("Enter base of triangle:");
-            double readResult1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter height of triangle:");
-            double readResult2 = Convert.ToDouble(Console.ReadLine());
-            double sum = readResult1 * readResult2 / 2;
-
-        static double AreaOfSquare(double side)
-            {
-                return side * side;
-            }
-        static double AreaOfRectangle(double side)
-            {
-                return side * side;
-            }
-            
-                }
+            double area = recside1 * recside2;
+            return area;
+        }
+        static double AreaOfSquare(double side1, double side2)
+        {
+                double area = side1 * side2;
+                return area;
+        }
+        static double TriagnleMethod(double width, double height)
+        {
+                double result = (width * height) / 2;
+                return result;
+        }
+        ///This is a comment just to commit 
     }
 }
+
+
+        
+        
